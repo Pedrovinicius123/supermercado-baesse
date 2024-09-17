@@ -6,6 +6,3 @@ class User(Cart):
         self.age = age
         self.email = email
         super().__init__(tot_price)
-
-    
-    
