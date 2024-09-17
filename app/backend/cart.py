@@ -1,15 +1,16 @@
 from dataclasses import dataclass
-from products import Product
+from backend.products import Product
 
 
 @dataclass
 class Cart:
-    items: list
-    tot_price: float
+    def __init__(self, tot_price:float = 0):
+        self.items = []
+        self.tot_price = tot_price
 
     def add_item(self, item:Product):
         self.items.append(item)
-        self.tot_price += items.price
+        self.tot_price += item.price
 
     def remove_item(self, item_name):
         items_list = list(map(self.items, lambda x:x.product_name))
