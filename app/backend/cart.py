@@ -1,8 +1,6 @@
-from dataclasses import dataclass
 from backend.products import Product
 
 
-@dataclass
 class Cart:
     def __init__(self, tot_price:float = 0):
         self.items = []
